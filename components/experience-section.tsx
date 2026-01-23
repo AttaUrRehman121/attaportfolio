@@ -44,7 +44,7 @@ const experience: ExperienceItem[] = [
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="py-16">
+    <section id="experience" className="py-12 sm:py-16">
       <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-16">
         <SectionHeading
           eyebrow="Experience"
@@ -52,7 +52,7 @@ export function ExperienceSection() {
           description="Roles that shaped how I think about shipping software, leading teams, and building for real users."
         />
 
-        <div className="mt-12 space-y-6">
+        <div className="mt-8 sm:mt-12 space-y-4 sm:space-y-6">
           {experience.map((item) => (
             <Card
               key={`${item.company}-${item.role}`}

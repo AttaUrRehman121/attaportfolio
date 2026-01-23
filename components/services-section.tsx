@@ -51,7 +51,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-16">
+    <section id="services" className="py-12 sm:py-16">
       <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-16">
         <SectionHeading
           eyebrow="Services"
@@ -59,16 +59,16 @@ export function ServicesSection() {
           description="I partner end-to-end: aligning product goals, shaping UX, and delivering resilient, scalable software."
         />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 sm:mt-12 grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Card key={service.title} className="h-full border-white/10 bg-slate-900/70">
-              <CardHeader className="flex flex-row items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-300">
-                  <service.icon className="h-6 w-6" />
+              <CardHeader className="flex flex-row items-start gap-3 sm:gap-4">
+                <div className="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-300">
+                  <service.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
-                <div>
-                  <CardTitle>{service.title}</CardTitle>
-                  <CardDescription className="mt-2">
+                <div className="min-w-0 flex-1">
+                  <CardTitle className="text-base sm:text-lg">{service.title}</CardTitle>
+                  <CardDescription className="mt-2 text-sm">
                     {service.description}
                   </CardDescription>
                 </div>
@@ -77,16 +77,16 @@ export function ServicesSection() {
           ))}
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-white/10 bg-gradient-to-r from-blue-600/20 via-slate-900 to-slate-900 px-6 py-6 shadow-lg shadow-black/30">
+        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 rounded-2xl border border-white/10 bg-gradient-to-r from-blue-600/20 via-slate-900 to-slate-900 px-4 sm:px-6 py-4 sm:py-6 shadow-lg shadow-black/30">
           <div>
-            <h3 className="text-xl font-semibold text-white">
+            <h3 className="text-lg sm:text-xl font-semibold text-white">
               Need something bespoke?
             </h3>
             <p className="text-sm text-slate-300">
               Let&apos;s scope your next release or MVP together.
             </p>
           </div>
-          <Button href="#contact">Start a conversation</Button>
+          <Button href="#contact" className="w-full sm:w-auto">Start a conversation</Button>
         </div>
       </div>
     </section>

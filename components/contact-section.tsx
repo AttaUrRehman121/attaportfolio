@@ -35,7 +35,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-16">
+    <section id="contact" className="py-12 sm:py-16">
       <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-16">
         <SectionHeading
           eyebrow="Contact"
@@ -43,46 +43,50 @@ export function ContactSection() {
           description="Available for freelance, product partnerships, and rapid prototyping. Reach out via email, phone, or the form."
         />
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
-          <div className="space-y-6">
-            <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-blue-600/15 via-slate-900 to-slate-900 p-6 shadow-2xl shadow-black/30">
-              <div className="flex items-center gap-3 text-slate-200">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-500/10 text-blue-300">
-                  <Phone className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-slate-300">
-                    Phone
-                  </p>
-                  <a
-                    href="tel:+923095896203"
-                    className="text-lg font-medium text-white"
-                  >
-                    +92 309 5896203
-                  </a>
+        <div className="mt-8 sm:mt-12 flex flex-col items-center gap-8 sm:gap-10">
+          <div className="w-full max-w-4xl space-y-6">
+            <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
+              <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-blue-600/15 via-slate-900 to-slate-900 p-4 sm:p-6 shadow-2xl shadow-black/30">
+                <div className="flex items-center gap-3 text-slate-200">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-500/10 text-blue-300">
+                    <Phone className="h-5 w-5" />
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm font-semibold text-slate-300">
+                      Phone
+                    </p>
+                    <a
+                      href="tel:+923095896203"
+                      className="block break-words text-base sm:text-lg font-medium text-white hover:text-blue-300 transition-colors"
+                    >
+                      +92 309 5896203
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div className="mt-4 flex items-center gap-3 text-slate-200">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-500/10 text-blue-300">
-                  <Mail className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-slate-300">
-                    Email
-                  </p>
-                  <a
-                    href="mailto:Manirana770@gmail.com"
-                    className="text-lg font-medium text-white"
-                  >
-                    Manirana770@gmail.com
-                  </a>
+              <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-blue-600/15 via-slate-900 to-slate-900 p-4 sm:p-6 shadow-2xl shadow-black/30">
+                <div className="flex items-center gap-3 text-slate-200">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-500/10 text-blue-300">
+                    <Mail className="h-5 w-5" />
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm font-semibold text-slate-300">
+                      Email
+                    </p>
+                    <a
+                      href="mailto:AttaUrRehman7708@gmail.com"
+                      className="block break-all text-sm sm:text-base md:text-lg font-medium text-white hover:text-blue-300 transition-colors"
+                    >
+                      AttaUrRehman7708@gmail.com
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
 
             <form
               onSubmit={handleSubmit}
-              className="space-y-5 rounded-2xl border border-white/10 bg-slate-900/70 p-6 shadow-2xl shadow-black/30"
+              className="w-full rounded-2xl border border-white/10 bg-slate-900/70 p-6 shadow-2xl shadow-black/30 sm:p-8"
             >
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-2">
@@ -132,14 +136,14 @@ export function ContactSection() {
                   placeholder="Tell me about your project, timeline, and goals."
                 />
               </div>
-              <div className="flex items-center justify-between gap-3">
-                <Button type="submit">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                <Button type="submit" className="w-full sm:w-auto">
                   Send Message
                   <Send className="ml-2 h-4 w-4" />
                 </Button>
                 {message ? (
                   <p
-                    className={`text-sm ${
+                    className={`text-sm text-center sm:text-left ${
                       state === "success"
                         ? "text-green-300"
                         : state === "error"

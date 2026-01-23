@@ -103,7 +103,7 @@ const projects: Project[] = [
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-16">
+    <section id="projects" className="py-12 sm:py-16">
       <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-16">
         <SectionHeading
           eyebrow="Selected Work"
@@ -111,24 +111,24 @@ export function ProjectsSection() {
           description="A curated mix of client work, personal experiments, and product explorations from my GitHub."
         />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-8 sm:mt-12 grid gap-4 sm:gap-6 md:grid-cols-2">
           {projects.map((project) => (
             <Card
               key={project.name}
               className={`h-full border-white/10 bg-slate-900/70 ${project.highlight ? "ring-1 ring-blue-400/40" : ""}`}
             >
               <CardHeader className="flex flex-row items-start justify-between gap-3">
-                <div>
-                  <CardTitle className="flex items-center gap-2 text-lg">
-                    <Code2 className="h-5 w-5 text-blue-300" />
-                    {project.name}
+                <div className="min-w-0 flex-1">
+                  <CardTitle className="flex items-start gap-2 text-base sm:text-lg break-words">
+                    <Code2 className="h-5 w-5 text-blue-300 shrink-0 mt-0.5" />
+                    <span className="break-words">{project.name}</span>
                   </CardTitle>
-                  <CardDescription className="mt-2">
+                  <CardDescription className="mt-2 text-sm">
                     {project.description}
                   </CardDescription>
                 </div>
                 {project.highlight ? (
-                  <span className="rounded-full bg-blue-500/10 px-3 py-1 text-xs font-semibold text-blue-200">
+                  <span className="rounded-full bg-blue-500/10 px-2 sm:px-3 py-1 text-xs font-semibold text-blue-200 shrink-0">
                     Featured
                   </span>
                 ) : null}
@@ -138,16 +138,16 @@ export function ProjectsSection() {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200"
+                      className="rounded-full bg-white/5 px-2 sm:px-3 py-1 text-xs font-semibold text-slate-200"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
                   <Button
                     variant="secondary"
-                    className="px-4"
+                    className="w-full sm:w-auto px-4"
                     href={project.url}
                     target="_blank"
                     rel="noreferrer"
@@ -157,7 +157,7 @@ export function ProjectsSection() {
                   </Button>
                   <Button
                     variant="ghost"
-                    className="text-blue-200"
+                    className="w-full sm:w-auto text-blue-200"
                     href={project.url}
                     target="_blank"
                     rel="noreferrer"

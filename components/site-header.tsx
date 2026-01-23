@@ -64,14 +64,14 @@ export function SiteHeader() {
           : "bg-slate-950/70 backdrop-blur-md",
       )}
     >
-      <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-between gap-6 px-4 py-3 sm:px-6 lg:px-16">
+      <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-between gap-4 sm:gap-6 px-4 py-3 sm:px-6 lg:px-16">
         <Link
           href="#home"
           onClick={(e) => {
             e.preventDefault();
             handleNavigate("#home");
           }}
-          className="flex items-center gap-2 text-2xl font-semibold tracking-tight text-white"
+          className="flex items-center gap-1 sm:gap-2 text-lg sm:text-xl md:text-2xl font-semibold tracking-tight text-white"
         >
           <span>Atta</span>
           <span className="text-blue-400">Ur</span>
