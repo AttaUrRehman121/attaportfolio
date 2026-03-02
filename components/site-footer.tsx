@@ -15,7 +15,7 @@ const socials = [
 export function SiteFooter() {
   return (
     <footer className="border-t border-white/5 bg-slate-950/70">
-      <div className="mx-auto flex w-full max-w-screen-2xl flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-slate-400 sm:px-6 md:flex-row lg:px-16">
+      <div className="mx-auto flex w-full max-w-screen-2xl flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-slate-400 sm:px-6 md:flex-row lg:px-16 pb-[max(2rem,env(safe-area-inset-bottom,24px))]">
         <a href="#home" className="text-xl font-semibold text-white">
           Atta<span className="text-blue-400">Ur</span>Rehman
         </a>

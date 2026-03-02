@@ -76,7 +76,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative flex-1 flex justify-center md:justify-end">
+        <div className="relative flex-1 hidden md:flex justify-center md:justify-end">
           <div className="absolute inset-0 -z-10 animate-pulse rounded-full bg-blue-600/10 blur-3xl" />
           <div className="relative mx-auto h-[280px] w-[280px] sm:h-[320px] sm:w-[320px] md:h-[340px] md:w-[340px] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-2 sm:p-3 shadow-[0_20px_70px_-30px_rgba(0,0,0,0.7)]">
             <div className="relative h-full w-full overflow-hidden rounded-2xl">

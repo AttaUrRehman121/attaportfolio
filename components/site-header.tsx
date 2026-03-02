@@ -64,7 +64,7 @@ export function SiteHeader() {
           : "bg-slate-950/70 backdrop-blur-md",
       )}
     >
-      <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-between gap-4 sm:gap-6 px-4 py-3 sm:px-6 lg:px-16">
+      <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-between gap-4 sm:gap-6 px-4 py-3 sm:px-6 lg:px-16 pt-[max(0.75rem,env(safe-area-inset-top))]">
         <Link
           href="#home"
           onClick={(e) => {
@@ -126,8 +126,24 @@ export function SiteHeader() {
 
       {open ? (
         <div className="md:hidden">
-          <div className="fixed inset-0 z-30 bg-slate-950/70 backdrop-blur-md" />
-          <div className="fixed inset-x-4 top-20 z-40 space-y-6 rounded-2xl border border-white/10 bg-slate-900/90 p-6 shadow-2xl shadow-black/50">
+          <button
+            type="button"
+            className="fixed inset-0 z-30 bg-slate-950/95 backdrop-blur-md"
+            onClick={() => setOpen(false)}
+            aria-label="Close menu"
+          />
+          <div className="fixed left-4 right-4 top-20 z-40 flex flex-col gap-6 overflow-y-auto rounded-2xl border border-white/10 bg-slate-900 p-6 pb-[max(1.5rem,env(safe-area-inset-bottom,24px))] shadow-2xl shadow-black/50 max-h-[calc(100dvh-6rem)]">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-medium text-slate-400">Menu</span>
+              <button
+                type="button"
+                onClick={() => setOpen(false)}
+                className="rounded-lg p-2 -mr-2 text-slate-400 transition hover:bg-white/10 hover:text-white"
+                aria-label="Close menu"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
             <div className="space-y-3 text-base font-medium text-white">
               {navLinks.map((link) => (
                 <button

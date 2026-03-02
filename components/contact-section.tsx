@@ -46,7 +46,12 @@ export function ContactSection() {
         <div className="mt-8 sm:mt-12 flex flex-col items-center gap-8 sm:gap-10">
           <div className="w-full max-w-4xl space-y-6">
             <div className="grid gap-4 sm:gap-6 sm:grid-cols-2">
-              <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-blue-600/15 via-slate-900 to-slate-900 p-4 sm:p-6 shadow-2xl shadow-black/30">
+              <a
+                href="https://wa.me/923095896203"
+                target="_blank"
+                rel="noreferrer"
+                className="block rounded-2xl border border-white/10 bg-gradient-to-r from-blue-600/15 via-slate-900 to-slate-900 p-4 sm:p-6 shadow-2xl shadow-black/30 hover:border-blue-500/30 transition-colors"
+              >
                 <div className="flex items-center gap-3 text-slate-200">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-500/10 text-blue-300">
                     <Phone className="h-5 w-5" />
@@ -55,15 +60,13 @@ export function ContactSection() {
                     <p className="text-sm font-semibold text-slate-300">
                       Phone
                     </p>
-                    <a
-                      href="tel:+923095896203"
-                      className="block break-words text-base sm:text-lg font-medium text-white hover:text-blue-300 transition-colors"
-                    >
+                    <p className="break-words text-base sm:text-lg font-medium text-white">
                       +92 309 5896203
-                    </a>
+                    </p>
+                    <p className="mt-0.5 text-xs text-blue-400/80">Tap to open WhatsApp</p>
                   </div>
                 </div>
-              </div>
+              </a>
               <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-blue-600/15 via-slate-900 to-slate-900 p-4 sm:p-6 shadow-2xl shadow-black/30">
                 <div className="flex items-center gap-3 text-slate-200">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-500/10 text-blue-300">

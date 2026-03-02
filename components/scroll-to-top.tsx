@@ -19,7 +19,7 @@ export function ScrollToTop() {
   return (
     <Button
       variant="secondary"
-      className="fixed bottom-6 right-6 z-30 h-12 w-12 rounded-full p-0 shadow-xl shadow-black/40"
+      className="fixed bottom-[max(1.5rem,calc(1.5rem+env(safe-area-inset-bottom,0px)))] right-6 z-30 h-12 w-12 rounded-full p-0 shadow-xl shadow-black/40"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="Scroll to top"
     >

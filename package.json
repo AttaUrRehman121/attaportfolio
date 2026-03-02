@@ -6,9 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "cap:sync": "npm run build && npx cap sync",
+    "cap:android": "npx cap open android",
+    "cap:ios": "npx cap open ios"
   },
   "dependencies": {
+    "@capacitor-community/safe-area": "^8.0.1",
+    "@capacitor/android": "^8.1.0",
+    "@capacitor/core": "^8.1.0",
+    "@capacitor/ios": "^8.1.0",
+    "@capacitor/local-notifications": "^8.0.1",
+    "@capacitor/push-notifications": "^8.0.1",
     "clsx": "^2.1.0",
     "lucide-react": "^0.468.0",
     "next": "16.1.4",
@@ -16,6 +25,7 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
+    "@capacitor/cli": "^8.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

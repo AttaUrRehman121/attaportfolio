@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+import { NotificationProvider } from "@/components/notification-provider";
 
 const poppins = Poppins({
   variable: "--font-sans",
@@ -26,7 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      </head>
       <body className={`${poppins.variable} ${geistMono.variable} antialiased`}>
+        <NotificationProvider />
         {children}
       </body>
     </html>
